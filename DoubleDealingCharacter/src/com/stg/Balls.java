@@ -1,9 +1,12 @@
 package com.stg;
-
 import java.awt.Color;
 import java.awt.Graphics;
 
-//小球类
+/**
+ * 小球类
+ * @author SnowHotarubi
+ *
+ */
 public class Balls {
 	int ballsX;
 	int ballsY;
@@ -14,7 +17,9 @@ public class Balls {
 		ballsY = (int) (Math.random() * (Screen.catoonY - 40));
 		ballsSpeed = (int) (Math.random() * 4 + 3);
 	}
-
+	/**
+	 * 画小球
+	 */
 	public void drawBalls(Graphics g, String color) {
 		g.setColor(Color.decode(color));
 		g.fillOval(ballsX, ballsY, 40, 40);

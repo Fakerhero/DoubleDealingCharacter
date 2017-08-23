@@ -4,7 +4,11 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-//敌人
+/**
+ * 敌人
+ * @author SnowHotarubi
+ *
+ */
 public class Enemy {
 	private int enemyX;
 	private int enemyY;
@@ -60,6 +64,9 @@ public class Enemy {
 		g.drawImage(enemyImg, enemyX, enemyY, null);
 	}
 
+	/**
+	 * 敌人的移动
+	 */
 	public void moveEnemy() {
 		enemyY += enemySpeed;
 		//左右判断

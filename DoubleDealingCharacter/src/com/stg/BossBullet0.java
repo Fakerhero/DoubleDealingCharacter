@@ -5,7 +5,11 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-//boss发出的小球类0
+/**
+ * boss发出的小球类0
+ * @author SnowHotarubi
+ *
+ */
 public class BossBullet0 {
 	int BossBulletX;
 	int BossBulletY;
@@ -21,6 +25,9 @@ public class BossBullet0 {
 		g.drawImage(bossBulletImage, BossBulletX, BossBulletY, null);
 	}
 
+	/**
+	 * boss发出的小球的移动
+	 */
 	public void shootBossBullet() {
 		BossBulletX -= 6;
 		BossBulletY += 5;

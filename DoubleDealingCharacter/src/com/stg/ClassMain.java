@@ -11,7 +11,11 @@ public class ClassMain {
 	}
 }
 
-// 屏幕size接口
+/**
+ * 屏幕size接口，获取屏幕的大小，以及游戏窗口大小的设置。游戏模式控制，子弹模式控制
+ * @author SnowHotarubi
+ *
+ */
 interface Screen {
 	// final
 	Toolkit screen = Toolkit.getDefaultToolkit();

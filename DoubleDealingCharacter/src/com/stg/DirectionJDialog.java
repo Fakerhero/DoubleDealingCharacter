@@ -7,7 +7,11 @@ import java.io.FileInputStream;
 import javax.swing.*;
 import java.awt.*;
 
-//游戏说明类
+/**
+ * 游戏说明类
+ * @author SnowHotarubi
+ *
+ */
 public class DirectionJDialog extends JDialog {
 	/**
 	 * 

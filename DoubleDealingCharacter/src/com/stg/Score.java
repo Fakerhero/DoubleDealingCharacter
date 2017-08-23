@@ -4,6 +4,11 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
+/**
+ * 用于记录分录，英雄生命，boss生命，还有章节的类。
+ * @author SnowHotarubi
+ *
+ */
 public class Score {
 	long score;
 	String life;

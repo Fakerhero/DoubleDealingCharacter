@@ -5,6 +5,11 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
+/**
+ * Ó¢ÐÛ×Óµ¯
+ * @author SnowHotarubi
+ *
+ */
 public class HeroBullet {
 
 	private int heroBulletSizeX;

@@ -5,6 +5,11 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
+/**
+ * 
+ * @author SnowHotarubi
+ *
+ */
 public class PlainBullet {
 	int plainBulletX;
 	int plainBulletY;

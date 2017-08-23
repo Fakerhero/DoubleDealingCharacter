@@ -10,7 +10,11 @@ import java.net.URI;
 import java.net.URL;
 import javax.swing.*;
 
-//窗口
+/**
+ * 窗口
+ * @author SnowHotarubi
+ *
+ */
 public class GameJFrame extends JFrame {
 	/**
 	 * 
@@ -93,7 +97,9 @@ public class GameJFrame extends JFrame {
 	}
 
 	// 事件监听
-	// 选择-开始
+	/**
+	 * 选择-开始
+	 */
 	ActionListener startActionListener = new ActionListener() {
 
 		@Override
@@ -101,7 +107,9 @@ public class GameJFrame extends JFrame {
 			gameJPanel.start();
 		}
 	};
-	// 选项-暂停
+	/**
+	 * 选项-暂停
+	 */
 	ActionListener pauseActionListener = new ActionListener() {
 
 		@Override
@@ -109,7 +117,9 @@ public class GameJFrame extends JFrame {
 			gameJPanel.pause();
 		}
 	};
-	// 选项-重新开始
+	/**
+	 * 选项-重新开始
+	 */
 	ActionListener regameActionListener = new ActionListener() {
 
 		@Override
@@ -117,7 +127,9 @@ public class GameJFrame extends JFrame {
 			gameJPanel.regame();
 		}
 	};
-	// 选项-退出
+	/**
+	 * 选项-退出
+	 */
 	ActionListener exitItemActionListener = new ActionListener() {
 
 		@Override
@@ -126,7 +138,9 @@ public class GameJFrame extends JFrame {
 		}
 	};
 	// 排行榜
-	// 帮助-游戏说明
+	/**
+	 * 帮助-游戏说明
+	 */
 	ActionListener derectionItemListener = new ActionListener() {
 
 		@Override
@@ -136,7 +150,9 @@ public class GameJFrame extends JFrame {
 		}
 	};
 
-	// 帮助-关于
+	/**
+	 * 帮助-关于
+	 */
 	ActionListener aboutItemActionListener = new ActionListener() {
 
 		@Override
@@ -145,7 +161,11 @@ public class GameJFrame extends JFrame {
 		}
 	};
 
-	// 背景音乐线程
+	/**
+	 * 背景音乐线程
+	 * @author SnowHotarubi
+	 *
+	 */
 	class bgm extends Thread {
 		@Override
 		public void run() {

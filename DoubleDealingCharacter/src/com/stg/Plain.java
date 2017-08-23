@@ -5,6 +5,11 @@ import java.awt.Image;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
+/**
+ * 
+ * @author SnowHotarubi
+ *
+ */
 public class Plain {
 
 	int plainX;

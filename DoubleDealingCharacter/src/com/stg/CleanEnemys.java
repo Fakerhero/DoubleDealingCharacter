@@ -4,7 +4,11 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-//之前写的时候名字起的有点错了，这里的cleanEnemys是奖励的一个类，吃到奖励就拥有一次清屏的机会
+/**
+ * 之前写的时候名字起的有点错了，这里的cleanEnemys是奖励的一个类，吃到奖励就拥有一次清屏的机会
+ * @author SnowHotarubi
+ *
+ */
 public class CleanEnemys {
 
 	int x;

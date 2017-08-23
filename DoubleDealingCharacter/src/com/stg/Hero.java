@@ -5,7 +5,11 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
-//”¢–€¿‡
+/**
+ * ”¢–€¿‡
+ * @author SnowHotarubi
+ *
+ */
 public class Hero {
 
 	private int heroSizeX;

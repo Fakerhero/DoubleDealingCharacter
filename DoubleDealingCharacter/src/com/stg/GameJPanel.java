@@ -16,7 +16,11 @@ import java.util.Vector;
 
 import javax.swing.JPanel;
 
-//画板
+/**
+ * 画板
+ * @author SnowHotarubi
+ *
+ */
 @SuppressWarnings("serial")
 public class GameJPanel extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
 
@@ -31,19 +35,58 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 	public int bgY = -bgSizeY + Screen.screenY;
 
 	// 控制游戏
-	public long scoreTotal = 0; // 分数
-	public String assessGame = "萌新"; // 称号
-	public String assesString = "恭喜你送了全队人头";// 评价
-	int BossNO = 1;// boss 模式
-	int gameMode = 0; // 游戏模式
-	boolean shoot = false; // 英雄是否开枪
-	int egg = 0; // 彩蛋
-	int award = 0;// 奖励
-	boolean awardTOF = true;// 奖励开关
-	int state = Screen.LOADING; // 初始登录，控制游戏, 0 进入游戏
-	int life = 5; // 血条,满血
-	int bossLife = 150;// boss初始生命值
-	int enemySpeed = (int) (Math.random() * 6 + 10); // 关卡子弹敌人的移动速度
+	/**
+	 * 分数
+	 */
+	public long scoreTotal = 0; 
+	/**
+	 * 称号
+	 */
+	public String assessGame = "萌新"; 
+	/**
+	 * 评价
+	 */
+	public String assesString = "恭喜你送了全队人头";
+	/**
+	 *  boss 模式，用于切换图片
+	 */
+	int BossNO = 1;
+	/**
+	 * 游戏模式
+	 */
+	int gameMode = 0; 
+	/**
+	 * 英雄是否开枪
+	 */
+	boolean shoot = false; 
+	/**
+	 * 彩蛋
+	 */
+	int egg = 0; 
+	/**
+	 * 奖励
+	 */
+	int award = 0;
+	/**
+	 * 奖励开关
+	 */
+	boolean awardTOF = true;
+	/**
+	 * 初始登录，控制游戏, 0 进入游戏
+	 */
+	int state = Screen.LOADING; 
+	/**
+	 *  血条,满血
+	 */
+	int life = 5; 
+	/**
+	 * boss初始生命值
+	 */
+	int bossLife = 150;
+	/**
+	 * 关卡子弹敌人的移动速度
+	 */
+	int enemySpeed = (int) (Math.random() * 6 + 10); 
 	int plainSpeed = (int) (Math.random() * 6 + 4);
 	String img[] = { "images/bullet/herobullet0.png ", "images/bullet/herobullet1.png" };
 	String loading[] = { "一场灾难即将来临，这片土地将会面临一场杀戮", "而你作为这片土地的守护者，将在此守护", "黑夜覆盖了这片土地，而你无法回头", "等待你的将会是无情的战场，你将如何面对？",
@@ -56,8 +99,14 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 	Boss boss = new Boss(BossNO);
 	Score score2 = new Score();
 
-	static final int enemyAmout = 10; // 敌人数目
-	int heroBulletMode = 1;// 英雄子弹模式
+	/**
+	 * 敌人数目
+	 */
+	static final int enemyAmout = 10; 
+	/**
+	 * 英雄子弹模式
+	 */
+	int heroBulletMode = 1;
 	
 	// 集合
 	ArrayList<String> lifeList = new ArrayList<String>();// 得分
@@ -138,7 +187,10 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		g.fillOval(x, y, 50, 50);
 	}
 
-	// 画boss子弹
+	/**
+	 * 画boss子弹
+	 * @param g
+	 */
 	public void drawBossBullet(Graphics g) {
 		for (int i = 0; i < b0.size(); i++) {
 			b0.get(i).drawBossBullet(g);
@@ -163,32 +215,44 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		}
 	}
 
-	// 开始事件触发
+	/**
+	 * 开始事件触发
+	 */
 	public void start() {
 		state = Screen.RUNNING;
 		gameMode = 1;
 	}
 
-	// 暂停事件触发
+	/**
+	 * 暂停事件触发
+	 */
 	public void pause() {
 		state = Screen.PAUSE;
 	}
 
-	// 重新开始事件触发
+	/**
+	 * 重新开始事件触发
+	 */
 	public void regame() {
 		state = Screen.PAUSE;
 		gameMode = 0;
 		scoreTotal = 0;
 	}
 
-	// 奖励award
+	/**
+	 * 奖励award
+	 * @param g
+	 */
 	public void drawAward(Graphics g) {
 		for (int i = 0; i < cleanEnemys.size(); i++) {
 			cleanEnemys.get(i).draw(g);
 		}
 	}
 
-	// 游戏加载
+	/**
+	 * 游戏加载
+	 * @param g
+	 */
 	public void drawLoading(Graphics g) {
 		g.setColor(Color.white);
 		g.setFont(new Font("微软雅黑", Font.BOLD, 16));
@@ -199,7 +263,10 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		g.drawString(loading[4], Screen.screenX / 2 - 400, Screen.catoonY / 2 + 100);
 	}
 
-	// 游戏成功，结束
+	/**
+	 * 游戏成功，结束
+	 * @param g
+	 */
 	public void drawEnd(Graphics g) {
 		g.setFont(new Font("微软雅黑", 0, 20));
 		g.setColor(Color.white);
@@ -212,7 +279,10 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 
 	}
 
-	// 游戏失败，结束
+	/**
+	 * 游戏失败，结束
+	 * @param g
+	 */
 	public void drawOver(Graphics g) {
 		g.setColor(Color.decode("#a9a9c7"));
 		g.setFont(new Font("微软雅黑", Font.BOLD, 40));
@@ -225,7 +295,9 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		g.drawString("评价： " + assesString, Screen.screenX / 2 - 400, Screen.catoonY / 2 + 50);
 	}
 
-	// 生命
+	/**
+	 * 生命
+	 */
 	public void drawLife() {
 		lifeList.add(new String("☆☆☆☆☆"));
 		lifeList.add(new String("★☆☆☆☆"));
@@ -235,7 +307,11 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		lifeList.add(new String("★★★★★"));
 	}
 
-	// 内部类，游戏地图
+	/**
+	 * 内部类，游戏地图
+	 * @author SnowHotarubi
+	 *
+	 */
 	class paintMap {
 		public paintMap(Graphics g) {
 			Image bg = Toolkit.getDefaultToolkit().getImage("images/background/map.png");
@@ -243,7 +319,10 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		}
 	}
 
-	// 英雄子弹
+	/**
+	 * 英雄子弹
+	 * @param g
+	 */
 	public void drawHeroBullet(Graphics g) {
 		for (int i = 0; i < heroBullets.size(); i++) {
 			heroBullets.get(i).drawHeroBullet(g);
@@ -251,14 +330,20 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 	}
 
 	// 敌人
-	// 画敌军
+	/**
+	 * 画敌军
+	 * @param g
+	 */
 	public void drawEnemy(Graphics g) {
 		for (int i = 0; i < enemys.size(); i++) {
 			enemys.get(i).drawEnemy(g);
 		}
 	}
 	
-	// 画飞机
+	/**
+	 * 画飞机
+	 * @param g
+	 */
 	public void drawPlain(Graphics g) {
 		for (int i = 0; i < plains.size(); i++) {
 			plains.get(i).drawPlain(g);
@@ -439,7 +524,9 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 	}
 
 	// 移动线程
-	// 英雄移动线程
+	/**
+	 * 英雄移动线程
+	 */
 	public void heroMoveThread() {
 
 		new Thread() {
@@ -1067,7 +1154,9 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		}.start();
 	}
 
-	// 地图移动线程
+	/**
+	 * 地图移动线程
+	 */
 	public void mapMoveThread() {
 		new Thread() {
 			public void run() {
@@ -1092,7 +1181,9 @@ public class GameJPanel extends JPanel implements MouseListener, MouseMotionList
 		}.start();
 	}
 
-	// 装饰小球移动线程
+	/**
+	 * 装饰小球移动线程
+	 */
 	public void moveOrv() {
 		new Thread() {
 			public void run() {

@@ -1,13 +1,14 @@
 package com.stg;
-
 import javax.swing.*;
 import java.awt.*;
 
-//关于类
+/**
+ * 菜单中的关于内容
+ * @author SnowHotarubi
+ *
+ */
 public class AboutJDialog extends JDialog {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	int width = 400;
 	int height = 300;
