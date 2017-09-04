@@ -30,9 +30,9 @@
 
 现在会持续更新和修改，源码将会发布在我的github上。如果有好的建议可以发到我的邮箱：chenshjing@gmail.com。
 
-@author:SnowHotarubi<br>
+@author:Hanae Yuuma<br>
 date：2017-4-18<br>
-link：snowhotarubi.com<br>
+link：chenshaojing.github.io<br>
 
 ### 更新
 时间：2017-8-19<br>
